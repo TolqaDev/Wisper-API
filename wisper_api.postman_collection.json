@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "656f6a2e-5147-45c4-bfd4-2d3ef82b94ef",
+		"name": "Wisper API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16077723"
+	},
+	"item": [
+		{
+			"name": "GET: Healt Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "R8F4ZIps1OZaBp4ICt4FjHdQGC0sx4opS7nDwNrWchjK3TnyZw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Transcript Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "R8F4ZIps1OZaBp4ICt4FjHdQGC0sx4opS7nDwNrWchjK3TnyZw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/transcribe/272095db-468b-4d52-bae9-5a9bef396ed3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"transcribe",
+						"272095db-468b-4d52-bae9-5a9bef396ed3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST: Transcript Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "R8F4ZIps1OZaBp4ICt4FjHdQGC0sx4opS7nDwNrWchjK3TnyZw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "talent_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "acc_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "mp3_file",
+							"type": "file",
+							"src": "/C:/Users/tolqa/Downloads/ses_kaydi.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/transcribe",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"transcribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE: Transcript Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "R8F4ZIps1OZaBp4ICt4FjHdQGC0sx4opS7nDwNrWchjK3TnyZw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/transcribe/56896c09-4183-4c6a-9968-64eb0009a780/cancel",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"transcribe",
+						"56896c09-4183-4c6a-9968-64eb0009a780",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
